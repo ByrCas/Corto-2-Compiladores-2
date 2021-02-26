@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #region Referencias a Librerias, Frameworks y otros archivos -->
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <!-- google font: Nixie One -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+     <!-- componente básico codemirror -->
+    <link rel="stylesheet" href="codemirror-5.57.0/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror-5.57.0/theme/cobalt.css"> <!-- temas de --> 
+    <link rel="stylesheet" href="codemirror-5.57.0/theme/rubyblue.css">      <!-- codemirror -->
+    <script type="text/javascript" src= "codemirror-5.57.0/lib/codemirror.js"></script> <!-- JS escencial para codemirror -->
+    <!-- Llamada a JS -->
+    <script type="text/javascript" src="JS/main.js" defer></script> 
+    <!-- #endregion Referencias a Librerias, Frameworks y otros archivos -->
+     <title>Compi 2</title>
+</head>
+<body>
+    <!-- #region Opciones de encabezado -->
+        <header>
+            <h1 class="tituloPrincipal"> Corto # 2</h1>
+        </header>
+    <!-- #endregion Opciones de encabezado -->
+    <!-- #region Principal -->
+    <section id="main">
+        <section id="visualizador">
+            <div class="visores">
+                <div class="opcionesDeAnalisis">
+                    <br>
+                    <form >
+                        <p>Entrada: 
+                            <select id="selectorOpciones">
+                                <option value="" disabled selected style="display:none;">---</option>
+                                <option >Entrada # 0</option>
+                                <option >Entrada # 1</option>
+                                <option >Entrada # 2</option>
+                                <option >Entrada # 3</option>
+                                <option >Entrada # 4</option>
+                                <option >Entrada # 5</option>
+                                <option >Entrada # 6</option>
+                                <option >Entrada # 7</option>
+                                <option >Entrada # 8</option>
+                                <option >Entrada # 9</option>
+                            </select>
+                        </p>
+                    </form>
+                </div>
+                <br>
+                <div class="contenedorResponsive">
+                    <div class="primerSeparador">
+                        <textarea name="lectorEntrada" id="lectorEntrada"></textarea>
+                    </div>
+                    <div class="segundoSeparador">
+                        <textarea name="visorSalida" id="visorSalida"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="contenedorBotonAccionador">
+                    <button id="botonEjecucion">Ejecutar</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- #endregion Principal -->
+    <!-- #region Pie de Página -->
+    <footer>
+        <article>
+            <h4>Organización de Lenguaje y Compiladores 2 Sección: B+</h4>
+            <p>Corto # 2: Código Intermedio</p>
+            <p>Byron Gerardo Castillo Gómez</p>
+            <p>Catedrático: Ing. Erick Navarro</p>
+        </article>
+    </footer>
+    <!-- #endregion Pie de Página -->
+</body> 
+</html>

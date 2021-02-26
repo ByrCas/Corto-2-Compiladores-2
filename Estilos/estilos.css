@@ -1,0 +1,203 @@
+
+
+/*#region Elementos Generales*/
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Nixie One', cursive;
+}
+
+body {
+    background-color:#383365;
+}
+
+header {
+    color: #49AB80;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: larger;
+}
+
+footer {
+    background-color: #186049;
+    color: #F8F6F5;
+    padding: 25px;
+    text-align: center;
+    margin-top: 25px;
+    box-sizing: border-box;
+    /*Lo posicionamos siempre pegado al fondo:*/
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*#endregion Fin de Elementos Generales*/
+
+/*#region Contenedores Principales*/
+#main{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 430px;
+    box-sizing: border-box;
+    align-items: stretch; 
+}
+
+#visualizador{ 
+    width: 85%;
+    height: auto;
+    box-sizing: border-box; 
+}
+
+header h1{ /*titulo principal*/
+    width: 100%; 
+    font-size: larger;
+}
+
+
+/*#endregion Contenedores Principales*/
+
+/*#region  Edición de scroll-bars de visores */
+
+.visores{
+    background-color: #34495E;
+    flex-flow: column nowrap;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.visores::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    height: 10px;   /* Tamaño del scroll en horizontal */
+    display: visible;  
+    cursor: pointer;
+}
+
+.visores::-webkit-scrollbar-thumb {
+    background: #41B883;
+    border-radius: 5px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover/encima */
+.visores::-webkit-scrollbar-thumb:hover {
+    background: #49AB80;
+    transition:0.5s;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active/clickeado */
+.visores::-webkit-scrollbar-thumb:active {
+    background-color: #49AB80;
+}
+
+.visores::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 5px;
+}
+
+/*#endregion Fin Edición de scroll-bars de visores */
+
+/*#region Estilos de Botones */
+button{
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 9px 18px;
+    margin-bottom: 10px;
+}
+
+.contenedorBotonAccionador{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* dibuja y coloca "antes" el simbolo de play(triángulo acostado) */
+#botonEjecucion:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #fff;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#botonEjecucion{
+    background-color: #669999;
+}
+
+#botonEjecucion:hover{
+    background-color: #70B090;
+    transition: 0.5s;
+}
+/*#endregion Estilos de Botones */
+
+/*#region Editores/Textareas*/
+
+.contenedorResponsive{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 0; 
+}
+
+.primerSeparador, .segundoSeparador{
+    width: 40%;
+    height: auto;
+    padding: 0; 
+}
+
+
+/*#endregion Editores/Textareas*/
+
+/*#region Inputs*/
+
+#selectorOpciones{
+    border: 2px solid #49AB80;
+    border-radius: 5px;
+    background-color: #34495E;
+    color: #F8F6F5;
+    font-size: large;
+    padding: 5px;
+}
+
+form p{
+    text-align: center;
+    font-size: large;
+    color: #F8F6F5;
+}
+
+/*#endregion Inputs*/
+
+/*#region Media Query*/
+
+@media screen and (max-width: 850px){
+
+
+    .contenedorResponsive{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    
+    .primerSeparador, .segundoSeparador{
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+        padding: 0; 
+    }
+}
+
+/*#endregion Media Query*/
