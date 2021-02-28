@@ -1,4 +1,6 @@
 
+import {Analizador} from './Jison/Analizador';
+
 //#region Editores
 
 let editorEntrada = CodeMirror.fromTextArea(document.getElementById('lectorEntrada'), {
@@ -34,6 +36,8 @@ let entradaSeleccionada;
 
 //#endregion Entrada
 
+//#region Conexión con analizador
+
 let botonEjecucion = document.getElementById('botonEjecucion');
 botonEjecucion.addEventListener("click", ejecutarAnalisis);
 botonEjecucion.disabled = true;
@@ -49,7 +53,10 @@ function obtenerOpcionSeleccionada(){
 }
 
 function ejecutarAnalisis(){
-    
+    const resultado = Analizador.parse(editorEntrada.getValue());
+    editorSalida.setValue(String(resultado));
 }
+
+//#endregion Conexión con analizado
 
 //#endregion Analizador
